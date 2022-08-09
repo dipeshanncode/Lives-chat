@@ -22,5 +22,6 @@ io.on('connection',socket =>{
     delete users[socket.id];
  })
 });
-app.listen(8000, 'localhost');
+const port = process.env.PORT || 8000
+app.listen(port, 'localhost');
 console.log('Server running at http://localhost:8000/');
